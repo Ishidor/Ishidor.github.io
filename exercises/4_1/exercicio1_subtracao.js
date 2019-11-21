@@ -1,4 +1,4 @@
-let a = 10
-let b = 5
-
-console.log(a-b)
+function subtr(a, b) {
+    console.log (a - b)
+}
+subtr(10, 20)
