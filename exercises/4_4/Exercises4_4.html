@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.4</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body id=body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+        let jsDom = document.createElement("h1")
+        jsDom.innerText = "Exercício 4.4 - JavaScript DOM";
+        jsDom.classList.add("title")
+
+        let mainCont = document.createElement("div");
+        mainCont.classList.add("main-content");
+        mainCont.id = "mainCont";
+
+        let myList = document.createElement("div");
+        myList.id = "myList";
+
+        let centerCont = document.createElement("div");
+        centerCont.classList.add("center-content");
+        centerCont.id = "centerCont";
+
+        let pDivSon = document.createElement("p");
+        pDivSon.innerText="Algum texto colocado";
+
+        let lftCont = document.createElement("div");
+        lftCont.classList.add("left-content");
+        lftCont.id = "lftCont";
+
+        let rightCont = document.createElement("div");
+        rightCont.classList.add("right-content");
+        rightCont.style.marginRight = "auto"
+        rightCont.id = "rightCont";
+
+        let img = document.createElement("img");
+        img.classList.add("small-image");
+        img.src="https://picsum.photos/200"
+
+        let numbers = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+        let ul = document.createElement("ul");
+        numbers = numbers.splice (0, 8);
+
+        for (let i = 0; i < numbers.length; i++) {
+            let li = document.createElement("li");
+            let text = document.createTextNode(numbers[i]);
+            li.appendChild(text);
+            ul.appendChild(li);
+        }
+               
+        let step9H31 = document.createElement("h3");
+        step9H31.classList.add("description");
+        step9H31.innerText = "H3 nº1";
+
+        let step9H32 = document.createElement("h3");
+        step9H32.classList.add("description");
+        step9H32.innerText = "H3 nº2";
+
+        let step9H33 = document.createElement("h3");
+        step9H33.classList.add("description");
+        step9H33.innerText = "H3 nº3";
+        
+
+
+        document.body.appendChild(jsDom);
+        document.body.appendChild(mainCont);
+        document.getElementById('mainCont').appendChild(centerCont);
+        document.getElementById('centerCont').appendChild(pDivSon);
+        document.getElementById('mainCont').appendChild(lftCont);
+        document.getElementById('mainCont').appendChild(rightCont);
+        document.getElementById('lftCont').appendChild(img);
+        document.getElementById('rightCont').appendChild(ul);
+        document.getElementById('mainCont').appendChild(step9H31);
+        document.getElementById('mainCont').appendChild(step9H32);
+        document.getElementById('mainCont').appendChild(step9H33);
+        document.getElementById('centerCont').parentNode.style.backgroundColor = "green";
+        mainCont.removeChild(lftCont);
+
+    </script>
+  </body>
+</html>
