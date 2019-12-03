@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <form name="form" onsubmit="return checker()" method="POST" id="wholeForm">
+        <fieldset>
+            <legend>Dados Pessoais:</legend>
+            Nome: <input type="text" maxlength="40" required><br>
+            Email: <input type="text" maxlength="50" required pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"><br>
+            CPF: <input type="text" accept="number" maxlength="11" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+            Endereço: <input type="text" maxlength="200" required><br>
+            Cidade: <input type="text" maxlength="28" required><br>
+            Estado: <select id="select">
+                <option value="default">Selecione seu Estado</option>
+            </select> <br>
+            <div aria-required="true"> Tipo:
+                <input type="radio" id="residência1" name="residencia" value="casa">
+                <label for="residência1">Casa</label>
+            
+                <input type="radio" id="residencia2" name="residencia" value="apartamento">
+                <label for="residencia2">Apartamento</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Último Emprego:</legend>
+            Resumo do currículo: <textarea rows="10" cols="30" maxlength="1000" required></textarea><br>
+            Cargo: <input type="text" maxlength="40" required><br>
+            Descricao do Cargo: <input type="text" maxlength="500" required><br>
+            Data de Início: <input type="date" required>
+        </fieldset>
+        <input type="submit" id="submit" onclick="showInput()"></input>
+        <button type="reset">Clear Form</button>
+        <label>Your input:</label>
+        <p><span id='display'></span></p>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
