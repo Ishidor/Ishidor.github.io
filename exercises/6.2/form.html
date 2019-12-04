@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+    <link rel="stylesheet" href="DatePickerX-master/dist/css/DatePickerX.min.css">
+    <script src="DatePickerX-master/dist/js/DatePickerX.min.js"></script>
+    <link href="popup-validation-master/bin/validation.min.css" rel="stylesheet">
+    <script src="popup-validation-master/bin/validation.min.js"></script>
+</head>
+<body>
+    <section class="section is-small">
+        <form name="form" onsubmit="return checker()" method="POST" id="wholeForm">
+            <p class="subtitle has-text-centered">Dados Pessoais</p>
+            <div class="field">
+                <label class="label">Nome:</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Email:</label>
+                <div class="control">
+                    <input class="input" type="email" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">CPF:</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Endereço:</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Cidade:</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Estado:</label>
+                <div class="control">
+                    <div class="select is-rounded is-small">
+                        <select id="select">
+                            <option value="default">Selecione seu estado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Tipo:</label>
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="residencia">
+                        Casa
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="residencia">
+                        Apartamento
+                    </label>
+                </div>
+            </div>
+            <p class="subtitle has-text-centered">Último Emprego</p>
+            <div class="field">
+                <label class="label">Resumo do Currículo:</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Escreva o resumo de seu currículo"></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Cargo:</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Descrição do Cargo:</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Data de início:</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input" id="date">
+                </div>
+            </div>
+            <input type="submit" id="submit" class="button is-success" onclick="showInput()"></input class="input">
+            <button type="reset" class="button is-danger">Clear Form</button><br>
+            <label>Your input class="input":</label>
+            <p><span id='display'></span></p>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
