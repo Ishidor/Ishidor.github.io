@@ -10,7 +10,8 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 document.getElementById("date").DatePickerX.init({format:'dd/mm/yyyy'});
-
+validation.init();
+validation.highlight();
 
 let submit = document.getElementById("submit");
 submit.addEventListener("click", function(event){
