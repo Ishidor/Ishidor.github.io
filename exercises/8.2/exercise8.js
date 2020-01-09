@@ -110,7 +110,8 @@ const expected_result = [
 
 function booksOrderedByReleaseYearDesc() {
   // escreva aqui seu código
+  const sorting = (a, b) => b.releaseYear - a.releaseYear;
+  return books.sort(sorting)
 }
-
 
 assert.deepEqual(booksOrderedByReleaseYearDesc(), expected_result);

@@ -74,6 +74,8 @@ const expected_result = [
 
 function formatedBookNames() {
   // escreva seu código aqui
+  const fbn = books.map(bn => bn.name + ' - ' + bn.genre + ' - ' + bn.author.name)
+  return fbn
 }
 
 assert.deepEqual(formatedBookNames(), expected_result);
