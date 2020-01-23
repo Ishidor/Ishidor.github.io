@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Count Clicks</title>
+</head>
+
+<body>
+
+    <button type="button" onClick="onClick()">Click me</button>
+    <p>Clicks: <a id="clicks">0</a></p>
+
+    <script>
+        let clickCount = 0;
+        const onClick = () => {
+            clickCount += 1;
+            document.getElementById("clicks").innerHTML = clickCount;
+        };
+    </script>
+
+</body></html>
